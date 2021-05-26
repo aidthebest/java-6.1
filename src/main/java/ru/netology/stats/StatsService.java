@@ -30,14 +30,13 @@ public class StatsService {
 
     public long averageSum(long[] sales) {
 
-        long averageSum = 0;
+        long averageSum;
 
-        for (long sale : sales) {
+        StatsService service = new StatsService();
 
-            averageSum += sale ;
+        long salesSum = service.salesSum(sales);
 
-        }
-        averageSum = averageSum / (sales.length);
+        averageSum = salesSum / (sales.length);
 
         return averageSum;
     }
@@ -56,16 +55,10 @@ public class StatsService {
     }
 
     public long aboveAvarage (long[] sales) {
-//        long aboveAvarageMonth = 0;
-//        long month = 0;
-        long averageSum = 0;
 
-        for (long sale : sales) {
+        StatsService service = new StatsService();
 
-            averageSum += sale ;
-
-        }
-        averageSum = averageSum / (sales.length);
+        long averageSum = service.averageSum(sales);
 
         long months = 0;
         for (long sale : sales) {
@@ -77,15 +70,10 @@ public class StatsService {
 
 
     public long bellowAvarage (long[] sales) {
-//
-        long averageSum = 0;
 
-        for (long sale : sales) {
+        StatsService service = new StatsService();
 
-            averageSum += sale ;
-
-        }
-        averageSum = averageSum / (sales.length);
+        long averageSum = service.averageSum(sales);
 
         long months = 0;
         for (long sale : sales) {
