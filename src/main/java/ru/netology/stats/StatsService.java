@@ -32,9 +32,7 @@ public class StatsService {
 
         long averageSum;
 
-        StatsService service = new StatsService();
-
-        long salesSum = service.salesSum(sales);
+        long salesSum = this.salesSum(sales);
 
         averageSum = salesSum / (sales.length);
 
@@ -56,9 +54,7 @@ public class StatsService {
 
     public long aboveAvarage (long[] sales) {
 
-        StatsService service = new StatsService();
-
-        long averageSum = service.averageSum(sales);
+        long averageSum = this.averageSum(sales);
 
         long months = 0;
         for (long sale : sales) {
@@ -71,9 +67,7 @@ public class StatsService {
 
     public long bellowAvarage (long[] sales) {
 
-        StatsService service = new StatsService();
-
-        long averageSum = service.averageSum(sales);
+        long averageSum = this.averageSum(sales);
 
         long months = 0;
         for (long sale : sales) {
